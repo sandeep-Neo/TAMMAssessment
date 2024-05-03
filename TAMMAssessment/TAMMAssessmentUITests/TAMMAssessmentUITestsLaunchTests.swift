@@ -2,7 +2,7 @@
 //  TAMMAssessmentUITestsLaunchTests.swift
 //  TAMMAssessmentUITests
 //
-//  Created by Charanjeet Virdi on 02/05/24.
+//  Created by Capgemini on 02/05/24.
 //
 
 import XCTest

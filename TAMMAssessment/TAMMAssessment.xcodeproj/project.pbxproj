@@ -24,10 +24,12 @@
 		319D47932BE3A13200237B9B /* UniversityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47922BE3A13200237B9B /* UniversityListPresenter.swift */; };
 		319D47952BE3A15600237B9B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47942BE3A15600237B9B /* Router.swift */; };
 		319D47972BE3A33C00237B9B /* UniversityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47962BE3A33C00237B9B /* UniversityListModel.swift */; };
-		37D19217C4FE4E28C006BE6A /* Pods_TAMMAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5174B156A6CD0EF8B5A303 /* Pods_TAMMAssessment.framework */; };
-		6F3FDF2F0CFA57508EB70E18 /* Pods_TAMMAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856062DD06CA0BF475D8E510 /* Pods_TAMMAssessmentTests.framework */; };
-		D8C02B23687B22D738917F81 /* Pods_TAMMAssessment_TAMMAssessmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E16413B0E26B55622B7DC5 /* Pods_TAMMAssessment_TAMMAssessmentUITests.framework */; };
 		FA9BF57E2BE4AA6100775C13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BF57D2BE4AA6100775C13 /* DatabaseManager.swift */; };
+		FA9BF58E2BE5373400775C13 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA9BF58D2BE5373400775C13 /* RealmSwift */; };
+		FA9BF58F2BE5373400775C13 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FA9BF58D2BE5373400775C13 /* RealmSwift */; };
+		FA9BF5922BE5395500775C13 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BF5912BE5395500775C13 /* NetworkManager.swift */; };
+		FA9BF5942BE5398900775C13 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BF5932BE5398900775C13 /* CustomError.swift */; };
+		FA9BF5962BE5405800775C13 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BF5952BE5405800775C13 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +49,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FA9BF5862BE5316000775C13 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA9BF58F2BE5373400775C13 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2C61601D6A5543B1DD543218 /* Pods-TAMMAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessment.debug.xcconfig"; path = "Target Support Files/Pods-TAMMAssessment/Pods-TAMMAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 		31484A3D2BE3CD580012FC70 /* UniversityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewCell.swift; sourceTree = "<group>"; };
 		31484A3E2BE3CD580012FC70 /* UniversityViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityViewCell.xib; sourceTree = "<group>"; };
 		31484A412BE3D2DA0012FC70 /* UniversityDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailVC.swift; sourceTree = "<group>"; };
@@ -71,14 +86,12 @@
 		319D47942BE3A15600237B9B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		319D47962BE3A33C00237B9B /* UniversityListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListModel.swift; sourceTree = "<group>"; };
 		46E16413B0E26B55622B7DC5 /* Pods_TAMMAssessment_TAMMAssessmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessment_TAMMAssessmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B88389F4D228E4E6B472542 /* Pods-TAMMAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-TAMMAssessmentTests/Pods-TAMMAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
-		60C162D7A63837680E7A913A /* Pods-TAMMAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessment.release.xcconfig"; path = "Target Support Files/Pods-TAMMAssessment/Pods-TAMMAssessment.release.xcconfig"; sourceTree = "<group>"; };
-		6B1CB6B8E226514E0EF1DE46 /* Pods-TAMMAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-TAMMAssessmentTests/Pods-TAMMAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
-		778FC520DDC6CBAE43127527 /* Pods-TAMMAssessment-TAMMAssessmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessment-TAMMAssessmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-TAMMAssessment-TAMMAssessmentUITests/Pods-TAMMAssessment-TAMMAssessmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		856062DD06CA0BF475D8E510 /* Pods_TAMMAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C62796C6DD60D8B6F985DCA7 /* Pods-TAMMAssessment-TAMMAssessmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TAMMAssessment-TAMMAssessmentUITests.release.xcconfig"; path = "Target Support Files/Pods-TAMMAssessment-TAMMAssessmentUITests/Pods-TAMMAssessment-TAMMAssessmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CD5174B156A6CD0EF8B5A303 /* Pods_TAMMAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9BF57D2BE4AA6100775C13 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		FA9BF5912BE5395500775C13 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FA9BF5932BE5398900775C13 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		FA9BF5952BE5405800775C13 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D19217C4FE4E28C006BE6A /* Pods_TAMMAssessment.framework in Frameworks */,
+				FA9BF58E2BE5373400775C13 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F3FDF2F0CFA57508EB70E18 /* Pods_TAMMAssessmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C02B23687B22D738917F81 /* Pods_TAMMAssessment_TAMMAssessmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +136,6 @@
 				319D476B2BE3725300237B9B /* TAMMAssessmentTests */,
 				319D47752BE3725300237B9B /* TAMMAssessmentUITests */,
 				319D47532BE3725000237B9B /* Products */,
-				8EE5584770C97641F59A9FFD /* Pods */,
 				63A8364374D03C6D7B47DED9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -143,6 +153,7 @@
 		319D47542BE3725000237B9B /* TAMMAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				FA9BF5902BE5392A00775C13 /* Shared */,
 				FA9BF57C2BE4AA3B00775C13 /* DatabaseManager */,
 				319D47852BE3A05600237B9B /* UniversityList */,
 				319D47552BE3725000237B9B /* AppDelegate.swift */,
@@ -245,25 +256,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8EE5584770C97641F59A9FFD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2C61601D6A5543B1DD543218 /* Pods-TAMMAssessment.debug.xcconfig */,
-				60C162D7A63837680E7A913A /* Pods-TAMMAssessment.release.xcconfig */,
-				778FC520DDC6CBAE43127527 /* Pods-TAMMAssessment-TAMMAssessmentUITests.debug.xcconfig */,
-				C62796C6DD60D8B6F985DCA7 /* Pods-TAMMAssessment-TAMMAssessmentUITests.release.xcconfig */,
-				4B88389F4D228E4E6B472542 /* Pods-TAMMAssessmentTests.debug.xcconfig */,
-				6B1CB6B8E226514E0EF1DE46 /* Pods-TAMMAssessmentTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		FA9BF57C2BE4AA3B00775C13 /* DatabaseManager */ = {
 			isa = PBXGroup;
 			children = (
 				FA9BF57D2BE4AA6100775C13 /* DatabaseManager.swift */,
 			);
 			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		FA9BF5902BE5392A00775C13 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA9BF5912BE5395500775C13 /* NetworkManager.swift */,
+				FA9BF5932BE5398900775C13 /* CustomError.swift */,
+				FA9BF5952BE5405800775C13 /* Constant.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,17 +281,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 319D477C2BE3725300237B9B /* Build configuration list for PBXNativeTarget "TAMMAssessment" */;
 			buildPhases = (
-				74E1E6F7F054BDBCCC8AE104 /* [CP] Check Pods Manifest.lock */,
 				319D474E2BE3725000237B9B /* Sources */,
 				319D474F2BE3725000237B9B /* Frameworks */,
 				319D47502BE3725000237B9B /* Resources */,
-				1D0633CFCF50E4BFFE4CC7D7 /* [CP] Embed Pods Frameworks */,
+				FA9BF5862BE5316000775C13 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TAMMAssessment;
+			packageProductDependencies = (
+				FA9BF58D2BE5373400775C13 /* RealmSwift */,
+			);
 			productName = TAMMAssessment;
 			productReference = 319D47522BE3725000237B9B /* TAMMAssessment.app */;
 			productType = "com.apple.product-type.application";
@@ -292,7 +302,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 319D477F2BE3725300237B9B /* Build configuration list for PBXNativeTarget "TAMMAssessmentTests" */;
 			buildPhases = (
-				1B72148B7980EB9D64DEC6F0 /* [CP] Check Pods Manifest.lock */,
 				319D47642BE3725300237B9B /* Sources */,
 				319D47652BE3725300237B9B /* Frameworks */,
 				319D47662BE3725300237B9B /* Resources */,
@@ -311,11 +320,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 319D47822BE3725300237B9B /* Build configuration list for PBXNativeTarget "TAMMAssessmentUITests" */;
 			buildPhases = (
-				5531C54972AE0DE46163297F /* [CP] Check Pods Manifest.lock */,
 				319D476E2BE3725300237B9B /* Sources */,
 				319D476F2BE3725300237B9B /* Frameworks */,
 				319D47702BE3725300237B9B /* Resources */,
-				4922692CCEFAC5B7D38DDB3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +366,9 @@
 				Base,
 			);
 			mainGroup = 319D47492BE3725000237B9B;
+			packageReferences = (
+				FA9BF57F2BE52BD300775C13 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 319D47532BE3725000237B9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,119 +408,19 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1B72148B7980EB9D64DEC6F0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TAMMAssessmentTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D0633CFCF50E4BFFE4CC7D7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment/Pods-TAMMAssessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment/Pods-TAMMAssessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment/Pods-TAMMAssessment-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4922692CCEFAC5B7D38DDB3C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment-TAMMAssessmentUITests/Pods-TAMMAssessment-TAMMAssessmentUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment-TAMMAssessmentUITests/Pods-TAMMAssessment-TAMMAssessmentUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TAMMAssessment-TAMMAssessmentUITests/Pods-TAMMAssessment-TAMMAssessmentUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5531C54972AE0DE46163297F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TAMMAssessment-TAMMAssessmentUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74E1E6F7F054BDBCCC8AE104 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TAMMAssessment-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		319D474E2BE3725000237B9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9BF5922BE5395500775C13 /* NetworkManager.swift in Sources */,
 				319D47952BE3A15600237B9B /* Router.swift in Sources */,
+				FA9BF5942BE5398900775C13 /* CustomError.swift in Sources */,
 				31484A422BE3D2DA0012FC70 /* UniversityDetailVC.swift in Sources */,
 				319D47912BE3A11400237B9B /* UniversityListIO.swift in Sources */,
 				319D47932BE3A13200237B9B /* UniversityListPresenter.swift in Sources */,
 				FA9BF57E2BE4AA6100775C13 /* DatabaseManager.swift in Sources */,
+				FA9BF5962BE5405800775C13 /* Constant.swift in Sources */,
 				319D47562BE3725000237B9B /* AppDelegate.swift in Sources */,
 				319D47972BE3A33C00237B9B /* UniversityListModel.swift in Sources */,
 				31484A3F2BE3CD580012FC70 /* UniversityViewCell.swift in Sources */,
@@ -693,7 +603,6 @@
 		};
 		319D477D2BE3725300237B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C61601D6A5543B1DD543218 /* Pods-TAMMAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -722,7 +631,6 @@
 		};
 		319D477E2BE3725300237B9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60C162D7A63837680E7A913A /* Pods-TAMMAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -751,9 +659,7 @@
 		};
 		319D47802BE3725300237B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B88389F4D228E4E6B472542 /* Pods-TAMMAssessmentTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -771,9 +677,7 @@
 		};
 		319D47812BE3725300237B9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B1CB6B8E226514E0EF1DE46 /* Pods-TAMMAssessmentTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -791,9 +695,7 @@
 		};
 		319D47832BE3725300237B9B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 778FC520DDC6CBAE43127527 /* Pods-TAMMAssessment-TAMMAssessmentUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -809,9 +711,7 @@
 		};
 		319D47842BE3725300237B9B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C62796C6DD60D8B6F985DCA7 /* Pods-TAMMAssessment-TAMMAssessmentUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -865,6 +765,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA9BF57F2BE52BD300775C13 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA9BF58D2BE5373400775C13 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA9BF57F2BE52BD300775C13 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 319D474A2BE3725000237B9B /* Project object */;
 }

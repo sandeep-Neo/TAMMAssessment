@@ -15,7 +15,7 @@ class Router: PresenterToRouterProtocol {
     /// Method will create UniversityListVC and will initialize all the dependency in it.
     /// - Returns: will return UIViewController type.
     static func createModule() -> UIViewController {
-        let view = mainstoryboard.instantiateViewController(withIdentifier: "UniversityListVC") as! UniversityListVC
+        let view = Constants.getViewController(storyboard: Constants.kMainStoryboard, identifier: Constants.kUniversityListVC, type: UniversityListVC.self)
         
         let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol & RouterToPresenterProtocol = UniversityListPresenter()
         let interactor: PresenterToInteractorProtocol = UniversityListIO()
@@ -33,16 +33,13 @@ class Router: PresenterToRouterProtocol {
         return view
     }
     
-    static var mainstoryboard: UIStoryboard {
-        return UIStoryboard(name:"Main",bundle: Bundle.main)
-    }
     
     /// Method will redirect to the screen with data.
     /// - Parameters:
     ///   - navigationConroller: UINavigationController required.
     ///   - data: UniversityListModel required.
     func pushToViewController(navigationConroller: UINavigationController, with data: UniversityListModel) {
-        let vc = Router.mainstoryboard.instantiateViewController(withIdentifier: "UniversityDetailVC") as! UniversityDetailVC
+        let vc = Constants.getViewController(storyboard: Constants.kMainStoryboard, identifier: Constants.kUniversityDetailVC, type: UniversityDetailVC.self)
         vc.universityData = data
         vc.delegate = self
         navigationConroller.pushViewController(vc, animated: true)

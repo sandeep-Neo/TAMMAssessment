@@ -20,7 +20,7 @@ protocol ViewToPresenterProtocol: AnyObject{
 
 protocol PresenterToViewProtocol: AnyObject{
     func showList(data: [UniversityListModel])
-    func showError()
+    func showError(error:CustomError)
 }
 
 protocol PresenterToRouterProtocol: AnyObject {
@@ -36,7 +36,7 @@ protocol PresenterToInteractorProtocol: AnyObject {
 
 protocol InteractorToPresenterProtocol: AnyObject {
     func fetchedSuccess(data: [UniversityListModel])
-    func fetchFailed()
+    func fetchFailed(error:CustomError)
 }
 
 protocol RouterToPresenterProtocol: AnyObject {

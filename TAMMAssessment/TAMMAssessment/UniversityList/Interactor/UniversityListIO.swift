@@ -10,40 +10,37 @@ import RealmSwift
 
 class UniversityListIO: PresenterToInteractorProtocol {
     var presenter: InteractorToPresenterProtocol?
-    private let urlStr: String = "http://universities.hipolabs.com/search?country=United%20Arab%20Emirates"
     
     /// Method will make the Network call using URLSession and will save the data into local database using Realm
     func fetchData() {
-        let url: URL = URL(string: urlStr) ?? URL(fileURLWithPath: "")
-        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self, let data = data, error == nil else {
-                if !RealmManager.shared.fetchData(obj: UniversityListModel.self).contains {
-                    self?.presenter?.fetchFailed()
-                }
-                self?.presenter?.fetchedSuccess(data:RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
-                
-                return
-            }
-            
-            DispatchQueue.main.async {
-                if let jsonData = try? JSONDecoder().decode([UniversityListModel].self, from: data){
-                    if jsonData.count == 0 {
+        guard let url = URL(string: Constants.kBaseUrl+Constants.kListUrl) else {
+            return
+        }
+        NetworkManager().getRequest(type:[UniversityListModel].self , url: url) { [weak self] result in
+            guard let ws = self else {return}
+            DispatchQueue.main.async{
+                switch result{
+                case .success(let dataValue):
+                    if dataValue.count == 0 {
                         if RealmManager.shared.fetchData(obj: UniversityListModel.self).contains {
-                            self.presenter?.fetchedSuccess(data: RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
+                            ws.presenter?.fetchedSuccess(data: RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
                         } else {
-                            self.presenter?.fetchFailed()
+                            ws.presenter?.fetchFailed(error: CustomError.NoDataFound)
                         }
                     } else {
                         RealmManager.shared.deleteAll(obj: UniversityListModel.self)
-                        RealmManager.shared.saveData(data: jsonData)
-                        self.presenter?.fetchedSuccess(data: RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
+                        RealmManager.shared.saveData(data: dataValue)
+                        ws.presenter?.fetchedSuccess(data: RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
                     }
-                   
-                    
+                case .failure(let error):
+                    if !RealmManager.shared.fetchData(obj: UniversityListModel.self).contains {
+                        self?.presenter?.fetchFailed(error: CustomError.NoDataFound)
+                    }
+                    self?.presenter?.fetchedSuccess(data:RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
                 }
             }
-            
-        }.resume()
+        }
+        
     }
 }
 

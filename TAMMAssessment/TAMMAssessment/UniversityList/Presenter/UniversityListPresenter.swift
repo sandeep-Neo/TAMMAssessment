@@ -39,8 +39,8 @@ extension UniversityListPresenter: InteractorToPresenterProtocol {
     }
     
     /// On failure method will receive the notification from Interactor layer and will be sent to the View layer.
-    func fetchFailed() {
-        view?.showError()
+    func fetchFailed(error: CustomError) {
+        view?.showError(error: error)
     }
 }
 

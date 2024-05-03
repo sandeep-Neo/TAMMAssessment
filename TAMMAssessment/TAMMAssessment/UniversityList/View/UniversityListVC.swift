@@ -10,7 +10,7 @@ import UIKit
 class UniversityListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    fileprivate let kCell = "UniversityViewCell"
     var presentor:ViewToPresenterProtocol?
     var universityList: [UniversityListModel]?
 
@@ -24,7 +24,7 @@ class UniversityListVC: UIViewController {
     private func setupTableView() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(UINib(nibName: "UniversityViewCell", bundle: nil), forCellReuseIdentifier: "UniversityViewCell")
+        self.tableView.register(UINib(nibName: kCell, bundle: nil), forCellReuseIdentifier: kCell)
     }
     
 }
@@ -41,9 +41,9 @@ extension UniversityListVC: PresenterToViewProtocol {
     }
     
     /// Method will display the alert error message.
-    func showError() {
-        let alert = UIAlertController(title: "Error", message: "Problem Fetching Data", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+    func showError(error: CustomError) {
+        let alert = UIAlertController(title: Constants.kAlertTitle_ERROR, message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: Constants.kAlertAction_YES, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -55,7 +55,7 @@ extension UniversityListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityViewCell", for: indexPath) as? UniversityViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: kCell, for: indexPath) as? UniversityViewCell else { return UITableViewCell() }
         
         let data = universityList?[indexPath.row]
         cell.populateCell(data: data)

@@ -1,6 +1,0 @@
-framework module Pods_TAMMAssessment_TAMMAssessmentUITests {
-  umbrella header "Pods-TAMMAssessment-TAMMAssessmentUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
