@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-
 /// Constants class will keep all constant methods and variables
 class Constants{
     // MARK: - Web service Urls
