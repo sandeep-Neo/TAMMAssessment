@@ -32,7 +32,7 @@ class UniversityListIO: PresenterToInteractorProtocol {
                         RealmManager.shared.saveData(data: dataValue)
                         ws.presenter?.fetchedSuccess(data: RealmManager.shared.fetchData(obj: UniversityListModel.self).data)
                     }
-                case .failure(let error):
+                case .failure(_):
                     if !RealmManager.shared.fetchData(obj: UniversityListModel.self).contains {
                         self?.presenter?.fetchFailed(error: CustomError.NoDataFound)
                     }

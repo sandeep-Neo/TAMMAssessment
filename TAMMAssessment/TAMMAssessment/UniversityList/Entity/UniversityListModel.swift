@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 import Realm
+/// Properties
 class UniversityListModel : Object, Decodable {
     @Persisted var domains = RealmSwift.List<String>()
     @Persisted var id : ObjectId = ObjectId.generate()
