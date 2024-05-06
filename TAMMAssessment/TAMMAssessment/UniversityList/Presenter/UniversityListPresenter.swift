@@ -10,11 +10,8 @@ import UIKit
 
 class UniversityListPresenter: ViewToPresenterProtocol {
     
-    
     var view: (any PresenterToViewProtocol)?
-    
     var interactor: (any PresenterToInteractorProtocol)?
-    
     var router: (any PresenterToRouterProtocol)?
     
     /// Method will send request to Interactor layer to start fetching data.

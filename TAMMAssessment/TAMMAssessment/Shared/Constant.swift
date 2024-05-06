@@ -16,16 +16,14 @@ class Constants{
     // Webservice Path
     static let kListUrl = "search?country=United%20Arab%20Emirates"
     
-    
     // MARK: -  Popup View
-    static let kAlertTitle_MESSAGE = "MESSAGE"
-    static let kAlertTitle_ERROR = "ERROR"
-
-
+    static let kAlertTitle_MESSAGE = "Message"
+    static let kAlertTitle_ERROR = "Error"
+    
     // MARK:-  Alert Action
-    static let kAlertAction_YES = "YES"
-    static let kAlertAction_CANCEL = "CANCEL"
-    static let kAlertAction_NO = "NO"
+    static let kAlertAction_YES = "Ok"
+    static let kAlertAction_CANCEL = "Cancel"
+    static let kAlertAction_NO = "No"
     
     // MARK: -   StoryBoard
     static let kMainStoryboard = "Main"
@@ -37,7 +35,7 @@ class Constants{
     // MARK: - UIStoryboard and push controller genric method
     
     static func getViewController<T: UIViewController>(storyboard: String, identifier: String, type: T.Type) -> T {
-        return Constants.getViewController(storyboard: storyboard, identifier: identifier) as! T
+        return Constants.getViewController(storyboard: storyboard, identifier: identifier) as? T ?? T()
     }
     
     static func getViewController(storyboard: String, identifier: String) -> UIViewController {

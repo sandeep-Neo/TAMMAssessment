@@ -20,7 +20,7 @@ class UniversityDetailVC: UIViewController {
     
     var universityData: UniversityListModel?
     weak var delegate: UniversityDetailProtocol?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -40,5 +40,4 @@ class UniversityDetailVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
         delegate?.refreshListScreen()
     }
-    
 }

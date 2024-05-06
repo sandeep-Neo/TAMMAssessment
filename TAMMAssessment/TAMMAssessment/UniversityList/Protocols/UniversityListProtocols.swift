@@ -15,7 +15,6 @@ protocol ViewToPresenterProtocol: AnyObject{
     var router: PresenterToRouterProtocol? {get set}
     func startFetchingData()
     func showViewController(navigationController: UINavigationController, with data: UniversityListModel)
-
 }
 
 protocol PresenterToViewProtocol: AnyObject{

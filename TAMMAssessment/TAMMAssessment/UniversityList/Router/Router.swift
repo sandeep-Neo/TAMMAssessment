@@ -33,7 +33,6 @@ class Router: PresenterToRouterProtocol {
         return view
     }
     
-    
     /// Method will redirect to the screen with data.
     /// - Parameters:
     ///   - navigationConroller: UINavigationController required.
@@ -41,7 +40,6 @@ class Router: PresenterToRouterProtocol {
     func pushToViewController(navigationConroller: UINavigationController, with data: UniversityListModel) {
         let vc = Constants.getViewController(storyboard: Constants.kMainStoryboard, identifier: Constants.kUniversityDetailVC, type: UniversityDetailVC.self)
         vc.universityData = data
-        
         vc.delegate = self
         navigationConroller.pushViewController(vc, animated: true)
     }

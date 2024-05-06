@@ -24,6 +24,7 @@
 		319D47932BE3A13200237B9B /* UniversityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47922BE3A13200237B9B /* UniversityListPresenter.swift */; };
 		319D47952BE3A15600237B9B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47942BE3A15600237B9B /* Router.swift */; };
 		319D47972BE3A33C00237B9B /* UniversityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319D47962BE3A33C00237B9B /* UniversityListModel.swift */; };
+		FA2326D42BE8AE110017F88C /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2326D32BE8AE110017F88C /* NetworkConnection.swift */; };
 		FA9BF57E2BE4AA6100775C13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9BF57D2BE4AA6100775C13 /* DatabaseManager.swift */; };
 		FA9BF58E2BE5373400775C13 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA9BF58D2BE5373400775C13 /* RealmSwift */; };
 		FA9BF58F2BE5373400775C13 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FA9BF58D2BE5373400775C13 /* RealmSwift */; };
@@ -88,6 +89,7 @@
 		46E16413B0E26B55622B7DC5 /* Pods_TAMMAssessment_TAMMAssessmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessment_TAMMAssessmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856062DD06CA0BF475D8E510 /* Pods_TAMMAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5174B156A6CD0EF8B5A303 /* Pods_TAMMAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TAMMAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2326D32BE8AE110017F88C /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		FA9BF57D2BE4AA6100775C13 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FA9BF5912BE5395500775C13 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA9BF5932BE5398900775C13 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				FA9BF5912BE5395500775C13 /* NetworkManager.swift */,
 				FA9BF5932BE5398900775C13 /* CustomError.swift */,
 				FA9BF5952BE5405800775C13 /* Constant.swift */,
+				FA2326D32BE8AE110017F88C /* NetworkConnection.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			files = (
 				FA9BF5922BE5395500775C13 /* NetworkManager.swift in Sources */,
 				319D47952BE3A15600237B9B /* Router.swift in Sources */,
+				FA2326D42BE8AE110017F88C /* NetworkConnection.swift in Sources */,
 				FA9BF5942BE5398900775C13 /* CustomError.swift in Sources */,
 				31484A422BE3D2DA0012FC70 /* UniversityDetailVC.swift in Sources */,
 				319D47912BE3A11400237B9B /* UniversityListIO.swift in Sources */,

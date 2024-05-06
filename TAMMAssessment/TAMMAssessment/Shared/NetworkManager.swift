@@ -19,7 +19,7 @@ class NetworkManager {
     }
     
     func getRequest<T: Decodable>(type: T.Type, url: URL, completion: @escaping(Result<T, CustomError>) -> Void) {
-       
+        
         aPIHandler.getData(url: url) { result in
             switch result {
             case .success(let data):
@@ -35,30 +35,27 @@ class NetworkManager {
                 completion(.failure(error))
             }
         }
-        
     }
-    
 }
 
-
-
 protocol APIHandlerDelegate {
-        func getData(url: URL, completion: @escaping(Result<Data, CustomError>) -> Void)
-    }
+    func getData(url: URL, completion: @escaping(Result<Data, CustomError>) -> Void)
+}
 
 class APIHandler: APIHandlerDelegate {
     func getData(url: URL, completion: @escaping(Result<Data, CustomError>) -> Void) {
-        
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else {
-                    return completion(.failure(.NoDataFound))
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                if !NetworkConnection.isConnectedToNetwork() == false {
+                    completion(.failure(.NoNetwork))
                 }
-                completion(.success(data))
-                
-            }.resume()
-        
+                return completion(.failure(.NoDataFound))
+            }
+            completion(.success(data))
+        }.resume()
     }
 }
+
 protocol ResponseHandlerDelegate {
     func fetchModel<T: Decodable>(type: T.Type, data: Data, completion: (Result<T, CustomError>) -> Void)
 }
@@ -72,5 +69,4 @@ class ResponseHandler: ResponseHandlerDelegate {
             completion(.failure(.ParsingError))
         }
     }
-    
 }

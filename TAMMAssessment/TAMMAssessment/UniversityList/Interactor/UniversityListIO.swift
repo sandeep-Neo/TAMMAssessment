@@ -40,7 +40,6 @@ class UniversityListIO: PresenterToInteractorProtocol {
                 }
             }
         }
-        
     }
 }
 

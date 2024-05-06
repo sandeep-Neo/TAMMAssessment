@@ -17,9 +17,9 @@ class UniversityListModel : Object, Decodable {
     @Persisted var web_pages = RealmSwift.List<String>()
     @Persisted var country : String = ""
     @Persisted var alpha_two_code : String = ""
-
+    
     enum CodingKeys: String, CodingKey {
-
+        
         case domains = "domains"
         case stateProvince = "state-province"
         case name = "name"
@@ -43,6 +43,7 @@ class UniversityListModel : Object, Decodable {
     {
         super.init()
     }
+    
     override static func primaryKey() -> String?
     {
         return "id"

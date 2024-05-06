@@ -13,7 +13,7 @@ class UniversityListVC: UIViewController {
     fileprivate let kCell = "UniversityViewCell"
     var presentor:ViewToPresenterProtocol?
     var universityList: [UniversityListModel]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
@@ -66,6 +66,5 @@ extension UniversityListVC: UITableViewDataSource, UITableViewDelegate {
         if let nav = navigationController , let data = universityList?[indexPath.row] {
             presentor?.showViewController(navigationController: nav, with: data)
         }
-        
     }
 }
