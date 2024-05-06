@@ -46,8 +46,8 @@ class APIHandler: APIHandlerDelegate {
     func getData(url: URL, completion: @escaping(Result<Data, CustomError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
-                if !NetworkConnection.isConnectedToNetwork() == false {
-                    completion(.failure(.NoNetwork))
+                if NetworkConnection().isConnectedToNetwork() == false {
+                    return completion(.failure(.NoNetwork))
                 }
                 return completion(.failure(.NoDataFound))
             }
